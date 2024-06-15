@@ -1,7 +1,9 @@
-function sumArray(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
+function sommeTableau(tableau) {
+    somme = 0;
+    for (nombre = 0; nombre < tableau.length; nombre++) {
+        somme += tableau[nombre];
     }
-    return sum;
+    return 'La somme est : ' + somme;
 }
+//Exemple:
+console.log(sommeTableau([1, 20, 3, 4, 5, 6, 7, 8, 9, 10]));

@@ -1,7 +1,10 @@
-function inverses (chaine){
+function inverses(chaine){
 	var chaineInverse = '';
-	for (let index = chaine.length- 1; index >= 0; index --){
+
+	for (index = chaine.length - 1; index >= 0; index--){
 		chaineInverse = chaineInverse + chaine[index];
 	}
-	return chaineInverse;
+	return 'L inverse de ' + chaine + ' est : ' + chaineInverse;
 }
+//Exemple :
+console.log(inverses('MOHAMED'))
