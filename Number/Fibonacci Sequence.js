@@ -1,6 +1,5 @@
 // Fonction pour générer une séquence de Fibonacci
 const fibonacciSequence = (numbers) => {
-    // Initialisation la séquence comme un tableau vide
     let sequence = [];
 
     if (numbers >= 1) {
