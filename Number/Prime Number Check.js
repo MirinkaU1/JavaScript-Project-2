@@ -1,13 +1,21 @@
-function nombrePremier(nombre) {
-    if (nombre <= 1) {  // Si le nombre est inf ou egal a 1.
-        return 'Le nombre '+ nombre + ' n est pas premier.';
+// Fonction pour vérifier si un nombre est premier
+const nombrePremier = (nombre) => {
+    // Si le nombre est inférieur ou égal à 1, il n'est pas premier
+    if (nombre <= 1) {
+        return `Le nombre ${nombre} n'est pas premier.`;
     }
-    for (i = 2; i <= Math.sqrt(nombre); i++) {  // Si le nombre est supp a 1 (Math.sqrt() est la racine carré).
-        if (nombre % i === 0) {  // Si le nombre est divisible par i, il n'est pas premier.
-            return 'Le nombre '+ nombre + ' n est pas premier.';
+
+    // Vérification des diviseurs potentiels jusqu'à la racine carrée du nombre
+    for (let i = 2; i <= Math.sqrt(nombre); i++) {
+        // Si le nombre est divisible par i, il n'est pas premier
+        if (nombre % i === 0) {
+            return `Le nombre ${nombre} n'est pas premier.`;
         }
     }
-    return 'Le nombre '+ nombre + ' est premier.'; // Si nous ne trouvons aucun diviseur, alors le nombre est premier.
-}
+
+    // Si aucun diviseur n'est trouvé, le nombre est premier
+    return `Le nombre ${nombre} est premier.`;
+};
+
 //Exemple :
 console.log(nombrePremir(23));
