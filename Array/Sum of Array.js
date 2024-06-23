@@ -1,9 +1,6 @@
-// Fonction pour calculer la somme des éléments d'un tableau
 const sommeTableau = (tableau) => {
-    // Initialisqtion de la somme à 0
     let somme = 0;
 
-    // Utilisqtion d'une boucle for pour parcourir chaque élément du tableau
     for (let nombre = 0; nombre < tableau.length; nombre++) {
         somme += tableau[nombre];
     }
