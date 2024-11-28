@@ -1,17 +1,9 @@
-function filtreTableau(tableau) {
-    // tableau vide pour stocker les nombres pairs
-    tableauPair = [];
-    // index pour le tableau des nombres pairs
-    nombrePair = 0;
+const filtreTableau = (tableau) => {
+    // Utilisation de la méthode filter pour créer un nouveau tableau contenant uniquement les nombres pairs
+    const tableauPair = tableau.filter(nombre => nombre % 2 === 0);
 
-    for (nombre = 0; nombre < tableau.length; nombre++) {
-        // Si le nombre est pair, on l'ajoute au tableau "tableauPair"
-        if (tableau[nombre] % 2 === 0) {
-            tableauPair[nombrePair] = tableau[nombre];
-            nombrePair++;
-        }
-    }
-    return 'Les nombres pairs sont : ' + tableauPair;
-}
+    // Retourne une chaîne de caractères qui inclut les nombres pairs du tableau
+    return `Les nombres pairs sont : ${tableauPair}`;
+};
 //Exemple :
 console.log(filtreTableau([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))

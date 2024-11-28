@@ -1,14 +1,17 @@
-function capitalizeFirstLetter(sentence) {
-    let capitalizedSentence = ''; // Initialisation de la phrase avec les premières lettres en majuscules
+// Fonction pour mettre en majuscule la première lettre de chaque mot dans une phrase
+const capitalizeFirstLetter = (sentence) => {
+    let capitalizedSentence = '';
 
-    for (i = 0; i < sentence.length; i++) {
-        // Si le caractère précédent ou le premier caractère est un espace, mettez en majuscule le caractère actuel
+    for (let i = 0; i < sentence.length; i++) {
+        // Si le caractère actuel est le premier ou si le caractère précédent est un espace
         if (i === 0 || sentence[i - 1] === ' ') {
+            // Mettre en majuscule le caractère actuel et l'ajouter à la phrase
             capitalizedSentence += sentence[i].toUpperCase();
         } else {
-            capitalizedSentence += sentence[i]; // Sinon, ajoutez le caractère tel quel
+            // Sinon, ajouter le caractère tel quel à la phrase
+            capitalizedSentence += sentence[i];
         }
     }
 
     return capitalizedSentence;
-}
+};
